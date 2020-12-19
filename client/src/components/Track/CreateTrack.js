@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import { Mutation } from 'react-apollo';
+import { gql } from 'apollo-boost';
+import axios from 'axios';
 import withStyles from "@material-ui/core/styles/withStyles";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
@@ -13,10 +16,7 @@ import CircularProgress from "@material-ui/core/CircularProgress";
 import AddIcon from "@material-ui/icons/Add";
 import ClearIcon from "@material-ui/icons/Clear";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
-import { Mutation } from 'react-apollo';
-import { gql } from 'apollo-boost';
 import Error from '../Shared/Error';
-import axios from 'axios';
 import { GET_TRACKS_QUERY } from '../../pages/App';
 
 const CreateTrack = ({ classes }) => {
